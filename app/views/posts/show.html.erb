@@ -1,0 +1,6 @@
+<div>
+  <%= @post.title %>
+  <%= @post.description %>
+
+  <%= cl_image_tag @post.photo.key, height: 300, width: 400, crop: :fill %>
+</div>
