@@ -4,3 +4,5 @@
 
   <%= cl_image_tag @post.photo.key, height: 300, width: 400, crop: :fill %>
 </div>
+
+<%= social_share_button_tag("Voici mon article #{@post.title}", :url => "http://localhost:3000/posts/#{@post.id}", desc: "Aidez nous à trouver #{@post.title}") %>

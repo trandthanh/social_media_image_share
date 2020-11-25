@@ -127,6 +127,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    marc (1.0.4)
+      scrub_rb (>= 1.0.1, < 2)
+      unf
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
@@ -143,6 +146,9 @@ GEM
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    openurl (1.0.0)
+      marc
+      scrub_rb (~> 1.0)
     orm_adapter (0.5.0)
     pg (1.2.3)
     pry (0.13.1)
@@ -212,6 +218,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    scrub_rb (1.0.1)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -279,6 +286,7 @@ DEPENDENCIES
   httparty (~> 0.13.7)
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  openurl (~> 1.0)
   pg (>= 0.18, < 2.0)
   pry-byebug
   pry-rails
