@@ -34,7 +34,7 @@ class ImageConverterService
     image = HTTParty.post("https://hcti.io/v1/image",
                           body: { html: html },
                           basic_auth: @auth)
-    @post.update(generated_image_url: image.url)
+    @post.update(generated_image_url: image.parsed_response["url"])
   end
 end
 

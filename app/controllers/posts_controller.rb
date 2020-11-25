@@ -6,8 +6,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
-    ImageConverterService.new(@post.id, Cloudinary::Utils.cloudinary_url(@post.photo.key)).generate_image
     if @post.save
+      ImageConverterService.new(@post.id, Cloudinary::Utils.cloudinary_url(@post.photo.key)).generate_image
       redirect_to post_path(@post)
     else
       render :new

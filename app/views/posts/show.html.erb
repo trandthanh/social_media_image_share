@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@post.title} is on POST" %>
+<% content_for :meta_description, @post.description %>
+<% content_for :meta_image, @post.generated_image_url %>
+
 <div>
   <%= @post.title %>
   <%= @post.description %>
@@ -5,4 +9,4 @@
   <%= cl_image_tag @post.photo.key, height: 300, width: 400, crop: :fill %>
 </div>
 
-<%= social_share_button_tag("Voici mon article #{@post.title}", :url => "http://localhost:3000/posts/#{@post.id}", desc: "Aidez nous à trouver #{@post.title}") %>
+<%= social_share_button_tag("Voici mon article #{@post.title}", url: "http://localhost:3000/posts/#{@post.id}", image: "#{@post.generated_image_url}", desc: "Aidez nous à trouver #{@post.title}") %>
