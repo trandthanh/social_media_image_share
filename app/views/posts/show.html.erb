@@ -1,9 +1,11 @@
 <% content_for :meta_title, "#{@post.title} is on POST" %>
 <% content_for :meta_description, @post.description %>
-<% content_for :meta_image, @post.generated_image_url %>
+<% content_for :meta_image, "https://og-image.vercel.app/Hello%20World.png" %>
 
 <%#= @post.generated_image_url %>
 <%#= cl_image_path @post.photo.key %>
+
+
 
 <div>
   <%= @post.title %>
