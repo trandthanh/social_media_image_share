@@ -1,6 +1,6 @@
 <% content_for :meta_title, "#{@post.title} is on POST" %>
 <% content_for :meta_description, @post.description %>
-<% content_for :meta_image, cl_image_path @post.photo.key %>
+<% content_for :meta_image, @post.generated_image_url %>
 
 <%#= @post.generated_image_url %>
 <%#= cl_image_path @post.photo.key %>
